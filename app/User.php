@@ -40,4 +40,8 @@ class User extends Authenticatable
     // public function clients(){
     //     return $this ->belongsToMany('App\Client')
     // }
+
+      public function echanges(){
+        return $this ->HasMany('App\Echanges', 'user_id');
+    }
 }

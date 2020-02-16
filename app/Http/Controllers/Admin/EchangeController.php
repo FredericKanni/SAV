@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Client;
+use App\Echange;
 use App\Http\Controllers\Controller;
+use App\User;
 use Illuminate\Http\Request;
 
-class ClientController extends Controller
+class EchangeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +16,9 @@ class ClientController extends Controller
      */
     public function index()
     {
-        $clients=Client::all();
-        return  view('admin.clients')->with('clients',$clients);
+        $echanges=Echange::all();
+        $users=User::all();
+        return  view('admin.echanges')->with('echanges',$echanges,'users',$users);
     }
 
     /**
@@ -48,11 +50,7 @@ class ClientController extends Controller
      */
     public function show($id)
     {
-        $client = Client::find(1)
-        ->where('id', '=', $id)
-        ->first();
-        
-        return  view('admin.fiche')->with('client',$client);;
+        //
     }
 
     /**

@@ -19,6 +19,8 @@ Route::get('/', function () {
 Route::get('/clients', 'Admin\ClientController@index');
 Route::get('/clients/{id}', 'Admin\ClientController@show');
 
+Route::get('/echanges', 'Admin\EchangeController@index');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

@@ -74,6 +74,7 @@
                                     </form>
 
                                     <a class="dropdown-item" href="/clients"> liste des clients</a>
+                                    <a class="dropdown-item" href="/echanges"> liste des echanges</a>
                                 </div>
                             </li>
                         @endguest
