@@ -21,6 +21,8 @@ Route::get('/clients/{id}', 'Admin\ClientController@show');
 
 Route::get('/echanges', 'Admin\EchangeController@index');
 
+Route::get('/echange/create', 'Admin\EchangeController@create');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

@@ -16,7 +16,11 @@
                         <th scope="col">type</th>
                         <th scope="col">user_id + user_name</th>
                         <th scope="col">commentaire</th>
-                        <th scope="col">Action</th>
+                        <th scope="col">clients</th>
+                       <th scope="col"> {{-- Action --}}
+
+                          <a href="/echange/create"><button class="btn btn-success">ajouter un echange</button></a>
+                        </th>
                        
                       </tr>
                     </thead>
@@ -27,12 +31,12 @@
                       <tr>
                         <th scope="row">{{$echange-> id}}</th>
                     
-                        <td>{{$echange-> type}}</td>
+                        <td>{{$echange-> type-> type}}</td>
                         <td>({{$echange-> user_id}})     {{$echange-> user-> name}} </td>
                         <td>{{$echange->commentaire}}  </td>
-                        
+                        <td>({{$echange-> client_id}})     {{$echange-> client-> nom}} </td>
                         <td>
-                            <a href="plop"><button class="btn btn-warning">voir la fiche</button></a>
+                            <a href=""><button class="btn btn-warning">voir la fiche</button></a>
                     
                          
                       </td>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Echange;
 use App\Http\Controllers\Controller;
+use App\Type;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -17,8 +18,8 @@ class EchangeController extends Controller
     public function index()
     {
         $echanges=Echange::all();
-        $users=User::all();
-        return  view('admin.echanges')->with('echanges',$echanges,'users',$users);
+       // $users=User::all();
+        return  view('admin.echanges')->with('echanges',$echanges);
     }
 
     /**
@@ -28,7 +29,10 @@ class EchangeController extends Controller
      */
     public function create()
     {
-        //
+        $users=User::all();
+        $types=Type::all();
+        
+        return  view('echangeCreate')->with('types',$types)->with('users',$users);
     }
 
     /**
