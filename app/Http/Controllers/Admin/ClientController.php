@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Client;
+use App\Echange;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -51,8 +52,13 @@ class ClientController extends Controller
         $client = Client::find(1)
         ->where('id', '=', $id)
         ->first();
-        
-        return  view('admin.fiche')->with('client',$client);;
+
+        //retourne tous les echange ou user_id = $id
+        $echanges = Echange::all()
+        ->where('client_id', '=', $id);
+
+
+        return  view('admin.fiche')->with('client',$client)->with('echanges',$echanges);
     }
 
     /**

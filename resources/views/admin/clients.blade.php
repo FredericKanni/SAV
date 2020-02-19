@@ -29,7 +29,7 @@
                         <td>{{$client-> mail}}</td> --}}
                         <td>
                         
-                      <a href="/clients/{{$client-> id}}"><button class="btn btn-warning">voir la fiche</button></a>
+                      <a href="/client/{{$client-> id}}"><button class="btn btn-warning">voir la fiche</button></a>
                          
                       </td>
                       </tr>

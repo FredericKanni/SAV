@@ -17,11 +17,16 @@ Route::get('/', function () {
 
 // Route::get('/clients', 'ClientsController@index')->name('client.index');
 Route::get('/clients', 'Admin\ClientController@index');
-Route::get('/clients/{id}', 'Admin\ClientController@show');
+Route::get('/client/{id}', 'Admin\ClientController@show');
 
 Route::get('/echanges', 'Admin\EchangeController@index');
 
 Route::get('/echange/create', 'Admin\EchangeController@create');
+//Route::post('/echange/create', 'Admin\EchangeController@create');
+
+// Route::post('/echange/create', function () {
+//     return 'formulaire recu '. request('maliste');
+// });
 
 Auth::routes();
 

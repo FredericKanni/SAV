@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Client;
 use App\Echange;
 use App\Http\Controllers\Controller;
 use App\Type;
@@ -31,8 +32,8 @@ class EchangeController extends Controller
     {
         $users=User::all();
         $types=Type::all();
-        
-        return  view('echangeCreate')->with('types',$types)->with('users',$users);
+        $clients=Client::all();
+        return  view('admin.echangeCreate')->with('types',$types)->with('users',$users)->with('clients',$clients);
     }
 
     /**
@@ -54,7 +55,7 @@ class EchangeController extends Controller
      */
     public function show($id)
     {
-        //
+      //
     }
 
     /**

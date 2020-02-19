@@ -36,7 +36,7 @@
                         <td>{{$echange->commentaire}}  </td>
                         <td>({{$echange-> client_id}})     {{$echange-> client-> nom}} </td>
                         <td>
-                            <a href=""><button class="btn btn-warning">voir la fiche</button></a>
+                            <a href="/client/{{$echange-> client_id}}"><button class="btn btn-warning">voir la fiche</button></a>
                     
                          
                       </td>
